@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var</title>
+    <style>
+        /* Global */
+        body {
+            --minha-variavel: rgb(12, 132, 231);
+        }
+        :root {
+            --minha-variavel2: red;
+        }
+
+        div {
+            /* Acessa o valor da variável */
+            /* Royalblue é usado caso o valor seja inválido. */
+            background-color: var(--minha-variavel, royalblue);
+            color: var(--minha-variavel2, white);
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

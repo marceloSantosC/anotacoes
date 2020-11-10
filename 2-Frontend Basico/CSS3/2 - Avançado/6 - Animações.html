@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: none;
+            border: none;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+        }
+
+        /* Animação simples */
+        /* Define a animação nome que vai de vermelho a preto*/
+        @keyframes nome{
+            /* From representa 0% da duração animação (o início) */
+            from{
+                background-color: red;
+                color: white;
+            }
+            /* To representa 100% da duração da animação (fim) */
+            to {
+                background-color: black;
+                color: rgb(139, 139, 194);
+            }
+        }
+        /* Elemento que a animação será aplicada */
+        #anim1:hover{
+            /* Relaciona a animação com o elemento */
+            animation-name: nome;
+            /* Duração da animação, o valor padrão é 0 (sem animação) */
+            animation-duration: 4s;
+        }
+
+        /* Animação com % */
+        @keyframes nome2 {
+            /* Aos 0% (início) a animação terá cor bkg red, 
+            aos 25% yellow, aos 50% (metade) blue e no final (100%) green */
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+        
+        #anim2:hover {
+            animation-name: nome2;
+            /* A cada 2s a cor irá mudar */
+            animation-duration: 10s;
+        }
+    </style>
+</head>
+<body>
+    <div id="anim1">anim1</div>
+    <div id="anim2">anim2</div>
+    
+</body>
+</html>

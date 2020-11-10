@@ -1,0 +1,61 @@
+
+
+<!-- Control habilita os controles padrão da tag video -->
+<!-- Controlist="nodownload" retira o botão de download-->
+<!-- Ao usar a tag source é possível carregar o vídeo de
+        várias fontes diferentes-->
+<video id="meuvideo" width="500px" height="250px" controls autoplay="true" controlsList='nodownload'>
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta vídeos.
+</video>
+<div wm-progresso="meuvideo" class="progresso">
+    <div>
+
+    </div>
+</div>
+
+<div>
+    <button wm-play="meuvideo" >Iniciar</button>
+    <button wm-pause="meuvideo" >Pausar</button>
+</div>
+
+<script>
+    function getProgresso(video){
+       let tempoAtual = video.currentTime
+       let tempoTotal = video.duration
+       return Math.round((tempoAtual/tempoTotal)*100)
+    }
+    function configurar(id){
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[wm-play=${id}]`).onclick =() => video.play()
+        document.querySelector(`[wm-pause=${id}]`).onclick = () => video.pause()
+
+        setInterval(() => {
+            const percentualDeProgresso = getProgresso(video)
+            console.log(percentualDeProgresso)
+            const barraDeProgresso = document.querySelector(`[wm-progresso=${id}] > div`)
+            barraDeProgresso.style.width = `${percentualDeProgresso}%`
+            barraDeProgresso.innerHTML = `${percentualDeProgresso}%`
+         }, 250)
+
+    }
+    configurar('meuvideo')
+</script>
+
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+    }
+    .progresso > div {
+        background-color: red;
+        color: #ffffff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>

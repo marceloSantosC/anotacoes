@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        #inline{
+            /* Escondendo elementos com display e visibility */
+            display: none;
+            visibility: hidden;
+            display: block;
+
+        }
+        
+        /* Centralizar block */
+        /* Elementos tipo block com width menor que 100% 
+        podem ser centralizados com margin:auto */
+        #displayvisib {
+            background-color: pink;
+            max-width: 500px;
+            height: 300px;
+            margin: auto;
+        }
+
+        /* Display none vs Hidden */
+        #displaynone {
+            background-color: blue;
+            max-width: 200px;
+            height: 200px;
+
+            /* É como se o elemento não existisse */
+            display: none;
+        }
+        #visibilityhidden {
+            background-color: red;
+            max-width: 200px;
+            height: 200px;
+
+            /* o conteúdo não é visível */
+            visibility: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <span id="inline">Texto</span>
+    <div id="displayvisib">
+        <div id="displaynone"></div>
+        <div id="visibilityhidden"></div>
+    </div>
+    <div id="blockCentralizado"></div>
+
+    
+</body>
+</html>

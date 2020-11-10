@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando HTML</title>
+    <style>
+        .fundo-preto {
+            background: #000;
+        }
+
+        .fundo-verde {
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="mudaCorBody"></button>
+
+    <p id="p"> Mais texto </p>
+    <script>
+        // Reescrevendo todo o documento (cuidado ao usar numa página carregada)
+        // Document.write()
+        document.write("<h1> Texto </h1>")
+
+        // Modificando o texto
+        // innerHTML
+        document.getElementById('p').innerHTML = "Outro texto"
+        document.getElementById('p').firstChild.nodeValue = "Outro Titulo"
+
+        // Trabalhando com os atributos
+        // Modificar valor
+        document.getElementById('p').class = 'novaClasse'
+        document.getElementById('p').setAttribute('class', 'outroValor')
+        // Verificar se existe
+        document.getElementById('p').hasAttribute('class')
+        // Retornar valor
+        document.getElementById('p').getAttribute('class')
+        // Remover
+        document.getElementById('p').removeAttribute('class')
+
+
+        // Trabalhando com as classes
+        // Adicionando classes
+        document.body.classList.add('fundo-verde');
+        // Ligando e desligando classes
+        document.body.classList.toggle('active')
+        // Substituindo classes
+        document.body.classList.replace('old', 'new')
+        // Removendo classes
+        document.body.classList.remove('fundo-verde')
+    </script>
+</body>
+</html>

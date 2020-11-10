@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Sent Events</title>
+    <script>
+        if(typeof(EventSource) !== undefined) {
+            // Recebe a página que enviará atualizações como parâmetro
+            let source = new EventSource("servidor.php")
+
+            source.onmessage = function(evento){ 
+                document.getElementById("result").innerHTML += evento.data + "</br>"
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Seu navegador não suporta Server Sent Messages."
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <p id="result"></p>
+    
+</body>
+</html>

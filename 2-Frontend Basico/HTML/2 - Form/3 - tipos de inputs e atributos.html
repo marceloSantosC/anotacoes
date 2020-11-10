@@ -1,0 +1,90 @@
+<form action="http://localhost:3005/usuarios" method="POST"> 
+    <!-- 
+        Input oculto: Input que não aparece para o usuário, mas é enviado
+        Usado para carregar um valor que não deve ser exibido 
+    -->
+    <input type="hidden" name="id" value="3">
+
+    <!-- 
+        Texto 
+        É o padrão quando o valor de input é omitido
+        autofocus dá o foco para o input assim que a página carega
+        autocomplete completa o texto automaticamente
+    --> 
+    <label for="usuario" max="50">Usuario</label>
+    <input type="text" name="usuario" autofocus autocomplete="on">
+    <hr/>
+
+    <!-- 
+        Password 
+        Placeholder indica como preencher o campo
+    -->
+    <label for="senha">Senha: </label>
+    <input type="password" name="senha" id="senha" placeholder="francisco123">
+    <hr/>
+
+    <!-- 
+        Radio
+        Caixa que aceita uma opção
+        O valor de value é o que sera enviado ao back-end 
+        Atributo checked define se deve ter algo pré-selecionado ao carregar
+    -->
+    <input type="radio" id="masc" name="sexo" value="masc">
+    <label for="masc">Masculino</label><br>
+    <input type="radio" id="fem" name="sexo" value="fem" checked>
+    <label for="fem">Feminino</label><br>
+    <hr/>
+
+    <!-- 
+        Checkbox
+        Caixa de confirmação
+        Aceita a seleção de 0 ou mais opções
+        Possui atributo checked
+    -->
+    <label for="dormiu">Você dormiu hoje? </label>
+    <input type="checkbox" name="dormiu" id="dormiu"> 
+    <label for="comeu">Você comeu hoje? </label>
+    <input type="checkbox" name="comeu" id="comeu" checked> 
+    <hr/>
+
+    <!-- Button -->
+    <input type="button" onclick="alert('Botão pressionado')" value="Botao">
+    <hr/>
+
+    <!-- 
+        Date
+        Existem outras variantes de date uma para selecionar horas outra para selecionar mês e ano
+     -->
+    <label for="aniversario">Aniversário :</label>
+    <input type="date" id="aniversario" name="aniversario">
+    <hr/>
+
+    <!--
+        Email
+        Dependendo do browser pode ser válidado antes de enviado
+    -->
+    <label for="email">email: </label>
+    <input type="email" name="email" id="email">
+    <hr/>
+
+    <!--
+        Files
+        Multiple possibilita selecionar mais de um arquivo
+    -->
+    <label for="arquivos">Selecione o arquivo:</label>
+    <input type="file" id="arquivos" name="arquivo" multiple>
+
+    <!--
+        Reset
+        Botão que reseta todos valores colocados no form
+    -->
+    <input type="reset">
+    <hr/>
+
+    <!-- 
+        Submit
+        Envia os dados para endereço em action
+        Pode ser um input
+    -->
+    <button type="submit"> Incluir </button>
+</form>

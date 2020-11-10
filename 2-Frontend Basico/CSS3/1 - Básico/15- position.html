@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div {
+            max-width: 200px;
+            height: 200px;
+            color: white;
+        }
+
+        #static {
+            /* static é o valor padrão, não precisa ser definido */
+            position: static;
+            background-color: red;
+        }
+
+        #relative {
+            background-color: blue;
+            position: relative;
+            /* Distancia o elemento em 200px de sua posição original */
+            left: 200px;
+        }
+
+        #fixed {
+            /* max-width não funciona */
+            width: 200px;
+            background-color: purple;
+            position: fixed;
+            /* Posição em relação ao VW */
+            top: 0;
+            right: 0;
+        }
+
+        #absolute {
+            background-color: royalblue;
+            width: 200px;
+            position: absolute;
+            right: 0;
+            top: 200px;
+        }
+
+        #sticky {
+            background-color: saddlebrown;
+            position: sticky;
+            top: 0;
+        }
+
+        /* z-index */
+        #overlap {
+            /* posiciona o elemento no mesmo local do fixed */
+            width: 200px;
+            background-color: gray;
+            position: fixed;
+            top: 0;
+            right: 0;
+            /* menor que o elemento fixed (0), por isso fica atrás */
+            z-index: -1;
+        }
+        
+        #scroll {
+            width: 100vw;
+            height: 400vh;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="static">Static</div>
+    <div id="relative">Relative</div>
+    <div id="fixed">Fixed</div>
+    <div id="absolute">Absolute</div>
+    <div id="sticky">sticky</div>
+    <div id="overlap"></div>
+
+    <div id="scroll"></div>
+    
+</body>
+</html>

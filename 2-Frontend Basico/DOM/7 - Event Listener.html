@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <div id="divAlert" style="max-width: 400px; height: 400px;border: 5px solid black; "></div>
+    <script>
+        const div = document.getElementById('divAlert');
+
+        // Callback que será executada e recebera o evento como param
+        function alertar(event) {
+            // Algumas props de Event
+            // O src de evento
+            alert(event.target)
+
+            // quando foi criado 
+            console.log(event.timestamp)
+
+            // nome do evento
+            console.log(event.type)
+        }
+
+        // Adicionar evento
+        // Mais de um handler por evento
+        div.addEventListener("click", alertar);
+        div.addEventListener("click", () => console.log(123));
+
+        // Remover handler
+        div.removeEventListener("click", alertar);
+
+        // Capture e bubbling
+        // Bubbling é padrão quando nenhum argumento(false) é passado
+        document.addEventListener("click", alertar, true);
+
+        // AddEventListener não é suportado em browsers antigos, só attachEvent
+        // A solução é essa
+        if (elemento.addEventListener) {     // Todos browsers menos IE8 e anteriores
+            elemento.addEventListener("click", myFunction);
+        } else if (elemento.attachEvent) {   // IE8 e antecessores 
+            elemento.attachEvent("onclick", myFunction);
+        }  
+        
+    </script>
+    
+</body>
+</html>

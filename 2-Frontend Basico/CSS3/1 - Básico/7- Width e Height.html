@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width e Height</title>
+    <style>
+        #id{ 
+            /* Height e Width */
+            height: 400px;
+            width: 1000px;
+            background-color: blue;
+        }
+        #maxW{
+            /*  max-width
+                Elemento redimensionado conforme o tamanho da tela */
+            height: 400px;
+            max-width: 1000px;
+            background-color: red;
+        }
+
+        #minmaxWH{
+            /* min e max height */
+            /* O height do elemento será sempre o minimo, 
+            se min-height não for definido, mas max-height sim o elemento não será mostrado */
+            min-height: 100px;
+            max-height: 400px;
+
+            /* min e max width */
+            max-width: 1000px;
+            min-width: 100px;
+            background-color: yellow;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="id"></div>
+    <div id="maxW"></div>
+    <div id="minmaxWH"></div>
+    
+</body>
+</html>

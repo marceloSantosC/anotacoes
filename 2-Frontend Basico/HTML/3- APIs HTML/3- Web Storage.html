@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+    <script>
+        if(typeof(Storage) != undefined){
+            // Guardar dados
+            localStorage.setItem("chave", "valor")
+            localStorage.outraChave = "valor"
+
+            // Recuperar dados
+            console.log(localStorage.getItem("chave"))
+            console.log(localStorage.outraChave)
+
+            // Deletar dados
+            localStorage.removeItem("chave")
+            delete localStorage.outraChave
+
+            console.log(localStorage.chave)
+            console.log(localStorage.outraChave)
+
+            // O mesmo vale para session storage
+            sessionStorage.setItem("chave", "valor")
+            sessionStorage.getItem("chave")
+            sessionStorage.removeItem("chave") 
+        } else {
+            throw Error("Web Storage não é suportado pelo browser")
+        }
+    </script>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker</title>
+
+    <script>
+        function iniciarWorker() {
+            if(typeof(Worker) != "undefined") {
+                if(typeof(worker) === "undefined") {
+                    // Cria o webworker com o arquivo
+                    // O google chrome não autoriza criar workers com arquivos locais
+                    worker = new Worker("scriptwebworker.js")
+                }
+
+                // Adiciona um eventlistener ao worker
+                // Toda vez que o código retorna algo isso é armazenado num objeto event
+                worker.onmessage = function(event){
+                    // Dados retornados em event.data
+                    // insere o retorno da função no <p>
+                    document.getElementById("result").innerHTML = event.data;
+                }
+            } 
+            else {
+                document.getElementById("result").innerHTML = "Seu browser não suporta web workers"
+            }
+        }
+        function pararWorker(){
+            worker.terminate()
+            worker = undefined
+        }
+
+    </script>
+</head>
+<body>
+    <p id="result"> 0 </p>
+    <button onclick="iniciarWorker()">Iniciar </button>
+    <button onclick="paraWorker()"> Parar </button>
+</body>
+</html>

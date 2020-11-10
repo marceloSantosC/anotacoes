@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix</title>
+    <style>
+        body {
+            margin: 0;
+            border: 0;
+        }
+
+        #pai {
+            background-color: aqua;
+        }
+
+        .filho {
+            background-color: blue;
+            width: 33.3%;
+            float: left;
+            border: solid 1px white;
+            box-sizing: border-box;
+        }
+
+        /* Sem clearfix o body terá height de 0 */
+        .clearfix::after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="pai" class="clearfix">
+    <div class="filho">a </div>
+    <div class="filho">b </div>
+    <div class="filho">c </div>
+</div>
+</body>
+</html>

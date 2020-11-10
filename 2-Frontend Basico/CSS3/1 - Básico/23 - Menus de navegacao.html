@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus de navegação</title>
+    <style>
+        .navList {
+            position: sticky;
+            width: 200px;
+            height: 100%;
+            height: auto;
+            left: 0;
+            top: 60px;
+        }
+
+        .navList * {
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border: solid cadetblue 1px;
+            width: 200px;
+            height: 50px;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 3vw;
+            height: 100%;
+            width: 100%;
+        }
+
+        #horizontal {
+            top: 0;
+            left: 500px;
+            width: 500px;
+        }
+
+        #horizontal ul {
+            width: 800px;
+        }
+
+        #horizontal li {
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
+
+        li a:hover:not(.active) {
+            background-color: gray;
+        }
+
+        .active {
+            background-color: chartreuse;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navList">
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    
+
+    <nav class="navList" id="horizontal">
+        <ul >
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

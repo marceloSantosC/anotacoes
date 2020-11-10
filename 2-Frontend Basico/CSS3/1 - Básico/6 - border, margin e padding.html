@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border, margin e padding</title>
+    <style>
+        #border{
+            width: 50vw;
+            height: 50vh;
+            
+            /* Border */
+            border-style: solid;
+            /* É possível usar um estilo para cada ponta */
+            border-top-style: solid; 
+            border-left-style: dotted;
+            border-bottom-style: dotted;
+            border-right-style: double;
+            /* Um tamanho e cor para cada ponta */
+            border-width: 15px 15px 10px 10px; /* Top, right, bottom, left */
+            border-color: red blue red blue; /* Top, right, bottom, left */
+            /* Shorthand */
+            border: solid 15px red;
+            /* Arredondar a borda */
+            border-radius: 15px;
+
+            /* Margin */
+            margin-top: auto; /* O browser define o valor */
+            margin-left: inherit; /* Herdado do pai */
+            margin-right: 5px;
+            margin-bottom: 5%; /* 5% do tamanho do elemento */
+            /* Shorthand */
+            margin: 5px 10px 15px 20px; /* Top, right, bottom, left */
+            /* Centralizando elemento */
+            margin: auto; /* define todas margins para auto */
+
+            /* Padding */
+            padding-top: 15px;
+            padding-right: 5%;
+            padding-bottom: inherit;
+            padding-left: 10px;
+            /* Shorthand */
+            padding: 10px 10px 10px 10px; /* Top, right, bottom, left */
+            padding: 10px 10px 10px; /* Top, right + left, bottom */
+            /* box-sizing */
+             /* Elemento sempre terá mesmo width, aumentar padding/border diminui 
+              a quantidade de espaço para o conteúdo */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="border"></div>
+    
+</body>
+</html>

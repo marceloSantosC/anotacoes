@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        #a {
+            /* Mudar o tipo do marcador */
+            list-style-type: circle;
+            /* imagem */
+            list-style-image: url('img.png');
+            
+            /* Posição dos marcadores 
+               Outside = fora do elemento li*/
+            list-style-position: outside;
+
+            /* Remover formatação padrão */
+            list-style-type: none;
+
+            /* Shorthand 
+               Imagem > type */
+            list-style: square outside circle; /* type, position, image */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <ul id="a">
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ul>
+
+    <ol id="b">
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ol>
+    
+    <ul id="c">
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+        <li>Elemento</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elementos</title>
+    <style>
+        /* First-line */
+        /* Primeira linha de um elemento */
+        p::first-line {
+            color: brown;
+            background-color: white;
+            font-size: 2em;
+        }
+
+        /* First-letter */
+        /* Primeira letra de um elemento */
+        p::first-letter {
+            color: blue;
+            background-color: red;
+            font-size: 2em;
+        }
+
+        /* Before e after*/
+        /* Adicionar conteúdo antes ou depois de um elemento */
+        p::before {
+            content: url("img/img.jpg");
+        }
+        p::after {
+            content: url("img/img.jpg");
+        }
+
+        /* Selection */
+        /* O conteúdo que está selecionado pelo usuário */
+        p::selection {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>You can use the ::first-letter pseudo-element to add a special effect
+    to the first character of a text!</p>
+</body>
+</html>

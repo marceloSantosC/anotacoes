@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar eventos</title>
+</head>
+<body>
+
+<script>
+    // Eventos normais
+    // Cria um evento normal
+    const evento = new Event('build');
+    
+    // Cria um handler para o evento
+    document.addEventListener('build', function (event) { 
+        console.log(event.target);
+    }, false);
+    
+    /* Dispara o evento, pode ser combinado
+        com outras coisas para disparar o evento em situações específicas */
+    document.dispatchEvent(evento);
+
+    // Eventos personalizados
+    // Criar com atributo personalizado (o nome deve ser 'detail')
+    const eventoPersonalizado = new CustomEvent('build2', {'detail': 'Olá'});
+
+    // Associar
+    document.addEventListener('build2', function (event) { 
+        // event.detail é o que foi definido acima
+        console.log(event.detail) 
+    }, false);
+
+    // Dispara um evento
+    document.dispatchEvent(eventoPersonalizado);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Intro</title>
+    <!-- Css interno -->
+    <style>
+        p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+
+    <!-- 
+        Css externo
+        Se modificar o elemento p assim como a tag style será carregado o valor daqui 
+        Isso se deve a ordem de declaração
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 
+    CSS inline
+    P será preto pois estilo inline é prioritário
+ -->
+<p style="color: red"> Algum texto </p>
+</body>
+
+</html>

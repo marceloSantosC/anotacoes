@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhando Elementos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        /* CENTRALIZAR ELEMENTOS */
+        /* elementos block */
+        #elementocentral {
+            width: 300px;
+            height: 500px;
+            background-color: red;
+
+            /* será usado para posicionar o elemento absolute */
+            position: relative;
+
+            /* o que importa */
+            margin: auto;
+        }
+        /* texto */
+        #textocentral {
+            background-color: blue;
+            color: white;
+
+            /* o que importa */
+            text-align: center;
+
+        }
+        /* imagem (tudo importa, menos width: 50%) */
+        #imgcentral {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50%;
+            height: auto;
+        }
+
+        /* ALINHAR NOS LADOS */
+        /* usando position abosolute */
+        #alinharesqposition {
+            background-color: blue;
+            width: 60%;
+            height: 50px;
+            color: white;
+
+            /* O que importa */
+            /* para position absolute fazer efeito o elemento pai deve ter position != padrão */
+            position: absolute;
+            left: 0;
+        }
+
+        /* Usando float */
+        #alinhardirfloat {
+            background-color:teal;
+            width: 40%;
+            height: 50px;
+            color: white;
+            font-size: 0.75em;
+
+            /* O que importa */
+            float: right;
+        }
+
+
+        /* Usando padding (funciona para centralizar também) */
+        #paddingcentral {
+            background-color: white;
+            color: black;
+            border: solid  2px black;
+
+            /* O que importa */
+            font-size: 2em;
+            padding-left: 70%;
+        }
+
+        /* Usando line-height */
+        /* height e line-height devem ser iguais */
+        #lineheightcentral {
+            height: 50px;
+            line-height: 50px;
+            background-color: chocolate;
+        }
+
+        /* Position + Transform */
+        #positionetransform {
+            height: 50px;
+            background-color: cyan;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="elementocentral">
+        <p id="textocentral">text-align</p>
+        <img src="img/img.jpg" alt="olho" id= "imgcentral" >
+        <div id="alinharesqposition">position absolute</div>
+        <div id="alinhardirfloat">float</div>
+        <p id="paddingcentral">pading</p>
+        <div id="lineheightcentral">line-height</div>
+        <p id="positionetransform">position e transform</p>
+        <p id="flexBox">Fleb</p>
+    </div>
+
+    
+</body>
+</html>

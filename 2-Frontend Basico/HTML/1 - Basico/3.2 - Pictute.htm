@@ -1,0 +1,17 @@
+
+<!-- Picture para economizar largura dado o tamanho do dispositivo-->
+<picture>
+    <source  media="(min-width: 650px)" srcset="img1.png">
+    <source media="(min-width: 400px)" srcset="img2.png">
+    <source media="(min-width: 0px)" srcset="img3.png">
+    <!-- Será carregado se o browser não suporta picture-->
+    <img src="img.png" alt="imagem">
+</picture>
+
+<!-- Picture para garantir que o browser suporta o formato da imagem -->
+<picture>
+    <source srcset="img.png">
+    <source srcset="img.jpg">
+    <source srcset="img.tga">
+    <img src="img.png" alt="imagem">
+</picture>

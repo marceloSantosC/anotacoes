@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo" >Navegando nas relacoes</title>
+</head>
+<body>
+    <div id="pai" atributo="valor">
+        <div id="filho1">
+        </div>
+
+        <div id="filho2">
+        </div>
+
+        <div id="filho3">
+            <p id="filho">filho1</p>
+        </div>
+
+    </div>
+    <script>
+        let bodyNode = document.body;
+
+        // Percorrendo o dom via parentesco
+        // Firstchild
+        let pai = bodyNode.firstChild;
+        // lastChild
+        let filho3 = pai.lastChild;
+        // childNodes
+        filho3 = pai.childNodes[2]
+        // previouSibling
+        let filho2 = filho3.previouSibling;
+        // nextSibling
+        filho3 = filho2.nextSibling; // filho3 é o nextSibling
+        // parentNode
+        bodyNode = filho3.parentNode;
+
+        // Acessando o texto de um elemento HTML
+        document.getElementById("titulo").innerHTML
+        // Acessa o elemento tittle e depois seu textNode
+        // Ambos dão o mesmo resultado
+        document.getElementById("titulo").firstChild.nodeValue = "Outro Titulo"
+
+        //Node name
+        document.nodeName // #document
+        document.getElementById("titulo").nodeName // H1
+
+        // Node Value
+        // Null para elementos
+        document.getElementById("pai").nodeValue
+        // O valor do atributo para atributos
+        document.getElementById("pai").atributo.nodeValue
+        // O texto para textnodes
+        document.getElementById("titulo").firstChild.nodeValue
+
+        // Node Type
+        // Retorna um valor que corresponde ao tipo do nó
+        document.getElementById("pai").nodeType // ELEMENT_NODE
+        document.document.getElementById("titulo").firstChild.nodeType // TEXT_NODE
+        document.getElementById("pai").atributo.nodeType // ATTRIBUTE_NODE
+        document.nodeType // DOCUMENT_NODE
+        document.doctype // DOCUMENT_TYPE_NODE
+
+    </script>
+</body>
+</html>

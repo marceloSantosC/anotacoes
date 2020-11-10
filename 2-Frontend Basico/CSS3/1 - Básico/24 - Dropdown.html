@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown</title>
+    <style>
+        .acionadordropdown {
+            /* Faz com que o conteúdo do dropdown (absolute) fique abaixo do acionador (relative) */
+            position: relative;
+            display: inline-block;
+        }
+
+        .conteudo-dropdown {
+            /* Oculta o conteúdo */
+            display: none;
+            /* Posiciona um elemento block com o conteúdo abaixo do acionador */
+            position: absolute;
+            background-color: aquamarine;
+            width: 100%;
+            /* Conteúdo irá se sobrepor a qualquer outro conteúdo */
+            z-index: 1;
+        }
+
+        .acionadordropdown:hover .conteudo-dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!-- Deve ser um conteiner -->
+<div class="acionadordropdown">
+    <!-- Pode ser qualquer elemento -->
+    <p> Acionar dropwdown menu </p>
+    <!-- Deve ser um elemento conteiner que vai conter o conteúdo-->
+    <div class="conteudo-dropdown">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+</div>
+
+
+
+
+    
+</body>
+</html>

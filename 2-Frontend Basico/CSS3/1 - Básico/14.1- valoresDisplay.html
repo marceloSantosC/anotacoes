@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        /*  
+        Display
+            Inline
+            - Ocupa apenas o espaço do conteúdo, então elementos podem ficar do lado
+            - Width e height não fazem nada em elementos com display inline
+            - Padding é considerado
+
+            Block
+            - Ocupa toda linha 
+            - Começa em uma nova linha
+            - Width e Height podem ser definidos
+
+            inline-block
+            - Mantem tudo na mesma linha, mas leva em consideração width e height
+            - Muito útil para quando se quer criar divisões de conteúdo com tamanho ajustável
+            - Caso haja um espaço em branco entre dois elementos inline-block esse espaço 
+            será considerado e criará uma linha divisória
+
+         */
+
+         body{
+             font-size: 40px;
+             color: white;
+             background-color: coral;
+         }
+         ul{
+             padding: 0;
+         }
+         div{
+            background-color: seagreen;
+         }
+         span{
+             background-color: dodgerblue;
+         }
+         li{
+             background-color: purple;
+         }
+
+         div, span, li{
+             width: 50%;
+             width: 200px;
+             height: 50px;
+             padding-top: 30px;
+             display: inline-block;
+         }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

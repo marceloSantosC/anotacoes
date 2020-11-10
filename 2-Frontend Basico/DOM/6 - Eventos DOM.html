@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<!-- Evento inline (não é boa prática) -->
+<body onload="document.body.style = 'background-color: #ccc'">
+    <p id="p">Um texto</p>
+    <button id="btn"> clique para mudar o texto !</button>
+    
+    <script>
+        // callback listener
+        function alertar(){
+            alert("Alert")
+        }
+
+        // Evento usando propriedade
+        // Para passar uma função com parâmetro passar ela dentro de um função anônima
+        // Um handler por evento
+        document.getElementById('btn').onclick = () => alertar(25)
+        
+
+    </script>
+</body>
+</html>

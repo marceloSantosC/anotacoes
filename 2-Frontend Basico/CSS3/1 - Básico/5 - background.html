@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+
+    <style>
+        /* Cor de fundo */
+        #bkg-color {
+            background-color: #000;
+            /* Define a opacidade do elemento e seus filhos */
+            opacity: 0.3;
+        }
+
+        /* Imagem de fundo */
+
+        #bkg-img {
+            /* Url recebe qualquer tipo de url (relativa ou não) */
+            background-image: url("img/img.jpg");
+
+            /* Propriedades de background */ 
+            /* Pode receber repeat-x para repetir horizontalmente ou repeat-y para verticalmente */
+            background-repeat: no-repeat;
+            background-position: right top;
+
+            /* Define o que acontecera com o plano de fundo quando  página for rolada */
+            background-attachment: fixed;
+
+            /* Shorthand */
+            background: #ffffff url("img_tree.png") no-repeat right top;
+        }
+    </style>
+</head>
+<body>
+
+<p id="bkg-color"></p>
+
+<div id="bkg-img" style="width: 100px; height: 100px;"></div>
+    
+</body>
+</html>

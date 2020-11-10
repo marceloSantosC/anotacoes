@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Base para deixar o documento responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Torna todas imagens responsivas */
+        img {
+            max-width: 650px;
+            width:100%;
+            height:auto;
+        }
+
+        h1 {
+            font-size: 10vw;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Usar picture para carregar imagens de tamanhos diferentes para economizar dados e melhorar
+        a qualidade da imagem para dispositivos diferentes -->
+    <picture>
+        <source srcset="img1.jpg" media="(max-width: 600px)">
+        <source srcset="img2.jpg" media="(max-width: 1500px)">
+        <source srcset="img3.jpg">
+        <img src="img.jpg" alt="Flowers">
+    </picture>
+
+    <!-- Texto que se ajusta ao tamanho do vw -->
+    <h1>Texto responsivo</h1>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flex-container {
+            /* Criar o flex container */
+            display: flex;
+
+            /* Flex direction */
+            flex-direction: row; /* padrão */
+
+            /* Define como ocorrerá o wrap */
+            flex-wrap: wrap;
+
+            /* Shorthand de direction e wrap  */
+            flex-flow: row wrap;
+
+            /* Alinhamento vertical dos elementos */
+            justify-content: center;
+
+            background-color: royalblue;
+            padding: 5px;
+            box-sizing: border-box;
+
+        }
+        
+        .flex-container > div {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            padding: none;
+            border: solid 1px black;
+            margin: none;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Flex direction */
+        /* Mostrar conteúdo em coluna */
+        .coluna {
+            background-color: red;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+<div class="flex-container coluna">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+    
+</body>
+</html>

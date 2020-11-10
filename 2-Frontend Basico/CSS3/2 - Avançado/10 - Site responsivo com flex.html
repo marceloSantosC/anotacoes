@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com flex</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #header {
+            padding: 20px;
+            background-color: rgb(125, 154, 241);
+            color: rgb(71, 70, 70);
+            text-align: center;
+        }
+
+        #header > h1 {
+            font-size: 40px;
+            padding: 0;
+        }
+
+        #header > p {
+            padding: 0;
+            font-size: 20px;
+        }
+
+        #nav {
+            display: flex;
+            background-color: rgb(36, 36, 36);
+        }
+
+        #nav > a {
+            padding: 10px 15px;
+            font-size: 2em;
+            text-decoration: none;
+            color:  #fff;
+            text-align: center;
+        }
+
+        #nav > a:hover {
+            background-color: rgb(78, 78, 78);
+        }
+
+        #conteudo {
+            padding: 5px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(223, 222, 222);
+            color: rgb(78, 78, 78);
+            text-align: justify;
+        }
+
+        #conteudo-principal {
+            padding: 5px 15px 10px 30px;
+            order: 2;
+            width: 70%;
+        }
+
+        #conteudo-lateral {
+            order: 1;
+            width: 30%;
+        }
+
+        #footer {
+            padding: 20px;
+            color: rgb(78, 78, 78);
+            text-align: center;
+            background-color: rgb(125, 154, 241);
+        }
+
+        .imgfake {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 700px) {
+                #conteudo, #nav {   
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #conteudo-lateral, #conteudo-principal {
+                width: 100%;
+                padding: 10px 5px 10px 2px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<header id="header">
+    <h1>Meu site</h1>
+    <p>Usando flex box</p>
+</header>
+    
+<nav id="nav">
+    <a href="">Link</a>
+    <a href="">Link</a>
+    <a href="">Link</a>
+    <a href="">Link</a>
+    <a href="">Link</a>
+</nav>
+
+<section id="conteudo">
+    <div id="conteudo-principal">
+        <h2>Título</h2>
+        <div class="imgfake" style="max-height: 250px;min-height: 200px;">img</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+        </p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>    
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+    </div>
+    <aside id="conteudo-lateral">
+        <h2>Título Aside</h2>
+        <div class="imgfake" style="max-height: 150px;min-height: 100px;">img</div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.
+        </p>
+        <h3>Título 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>  
+    </aside>
+</section>
+
+<footer id="footer">
+    <h1>Footer</h1>
+</footer>
+</body>
+</html>

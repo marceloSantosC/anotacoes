@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ</title>
+    <style>
+        /* Usando o mediatype */
+        /* Toda impressora terá background color red */
+        @media only print {
+            body {
+                background-color: red;
+            }
+        }
+        /* Todo dispositivo baseado em tela (não é leitor de tela) terá bkg color cinza */
+        @media only screen {
+            body {
+                background-color: rgb(165, 163, 163);
+            }
+        }
+        /* Todo leitor de tela tem cor de fundo vermelha */
+        @media only speech {
+            body {
+                background-color: red;
+            }
+        }
+
+
+        /* Usando o width/height da tela */
+        /* Se a tela for menor ou igual a 400px a cor será azul */
+        @media only screen and (max-height: 400px) {
+            body {
+                background-color: blue;
+            }
+        }
+        /* Se a tela estiver entre 401px e 500px a cor será verde */
+        @media only screen and (min-height: 401px) and (max-height: 500px) {
+            body {
+                background-color: green;
+            }
+        }
+        /* Se o height da tela for maior que 500px a cor será black */
+        @media screen and (min-height: 500px) {
+            body {
+                background-color: black;
+            }
+        }
+
+        /* Usando a orientação */
+        /* Se o browser estiver em landscape (paisagem) a cor será #ff00ff */
+        @media only screen and (orientation: landscape) {
+            body {
+                background-color: #ff00ff ;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

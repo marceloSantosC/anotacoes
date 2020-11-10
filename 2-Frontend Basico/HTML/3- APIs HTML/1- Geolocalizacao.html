@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalização</title>
+</head>
+<body>
+    
+<p id="localizacao"></p>
+<button></button>
+
+<script>
+let localizacao = document.getElementById("localizacao");
+
+// Callback que recebe um objeto position e insere na tag p
+function mostrarPosicao(position) {
+    localizacao.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br> Longitude: " + position.coords.longitude;
+}
+
+// Tratamento de erros
+function mostrarErro(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+        localizacao.innerHTML = "O acesso a geolocalização foi negado pelo usuário."
+      break;
+    case error.POSITION_UNAVAILABLE:
+        localizacao.innerHTML = "Não foi possível obter a localização."
+      break;
+    case error.TIMEOUT:
+        localizacao.innerHTML = "A requisição demorou muito para ser atendida."
+      break;
+    case error.UNKNOWN_ERROR:
+      localizacao.innerHTML = "Erro desconhecido."
+      break;
+  }
+}
+
+(function getGeolocalizacao(){
+    // Verifica se o recurso é suportado
+    if(navigator.geolocation) {
+        // Chama o objeto com uma função para mostrar a posição e outra para tratar erros
+        navigator.geolocation.getCurrentPosition(mostrarPosicao, mostrarErro);
+    } else {
+        localizacao.innerHTML = "Seu navegador não suporta o recurso de geolocalização."
+    }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex items</title>
+</head>
+    <style>
+
+
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            background-color: royalblue;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        
+        .flex-container > div {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            padding: none;
+            border: solid 1px black;
+            margin: none;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        /* order */
+        #primeiro {
+            order: 1;
+        }
+        #segundo {
+            order: 2;
+        }
+        #terceiro {
+            order: 3;
+        }
+
+        /* flex grow e shrink */
+        #grow-shrink > div{
+            font-size: 30px;
+            width: auto;
+            height: auto;
+        }
+        #grow {
+            flex-grow: 2;
+        }
+        #shrink {
+            flex-shrink: 5;
+        }
+
+        /* Flex-basis */
+        #basis {
+            flex-basis: 10vw;
+        }
+
+        /* flex-align */
+        #align {
+            align-items: center;
+            height: 300px;
+        }
+        #top {
+            align-self: flex-start;
+        }
+        #bottom {
+            align-self: flex-end;
+        }
+        #center {
+            align-self: center;
+        }
+
+
+    </style>
+<body>
+<div class="flex-container">
+    <div id="terceiro">3</div>
+    <div id="primeiro">1</div>
+    <div id="segundo">2</div>
+</div>
+
+<div class="flex-container" id="grow-shrink">
+    <div id="grow">3</div>
+    <div id="shrink">1</div>
+    <div>2</div>
+</div>
+
+<div class="flex-container" id="grow-shrink">
+    <div id="grow">3</div>
+    <div id="shrink">1</div>
+    <div id="basis">2</div>
+</div>
+
+<div class="flex-container" id="align">
+    <div id="top">3</div>
+    <div id="center">1</div>
+    <div id="bottom">2</div>
+</div>
+</body>
+</html>

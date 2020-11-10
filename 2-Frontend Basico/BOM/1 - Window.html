@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <script>
+        // O DOM é um atributo de window
+        console.log(window.document);
+
+        // Variáveis e objetos globais são parte de window
+        var global = 2;
+        console.log(window.global);
+
+        // Funções globais são parte de window
+        function globalFunction() {
+            console.log('Sou global');
+        }
+        window.globalFunction();
+
+        // Alterar tamanho da janela
+        window.innerHeight = 500;
+        window.innerWidth = 500;
+
+        // Abrir nova janela
+        window.open();
+
+        // Fechar janela atual
+        window.close();
+
+        // Mover 
+        window.moveTo(200, 200); // eixo x, eixo y
+
+        // Redimensionar
+        window.resizeTo(500, 500);
+    </script>
+    
+</body>
+</html>

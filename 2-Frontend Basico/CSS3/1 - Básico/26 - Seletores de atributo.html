@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores de atributo</title>
+    <style>
+        /* Seleciona todo a com target */
+        a [target] {
+            background-color: red;
+        }
+
+
+        /* Seleciona a com target igual self */
+        a [target="self"] {
+            background-color: blue;
+        }
+
+        
+        /* Seleciona a com o atributo atr e valor que contenha a palavra outro 
+        (outro valor, outro são exemplos, mas outro-valor não é selecionado)*/
+        a [atr~="outro"] {
+            background-color: blue;
+        }
+
+        /* Seleciona a com o atributo atr e valor que começa com a palavra outro 
+        (outro-valor, outro valor ou outro por exemplo) */
+        /* O valor deve ser uma palavra inteira */
+        a [atr|="outro"] {
+            background-color: blue;
+        }
+
+        /* Seleciona a com o atributo atr e valor que começa com x, 
+        podendo ser seguido de qualquer coisa*/
+        a [atr^="x"] {
+            background-color: blue;
+        }
+
+        /* Seleciona a com o atributo atr cujo valor é terminado pela letra f */
+        a [atr$="f"] {
+            background-color: blue;
+        }
+
+        /* Seleciona a com o atributo atr cujo valor contém a letra a */
+        a [atr*="a"] {
+            background-color: beige;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="http://google.com" target="_blank"></a>
+    <a href="http://google.com" target="self"></a>
+    <a href="http://google.com" atr="outro valor"></a>
+    <a href="http://google.com" atr="outro-valor"></a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes</title>
+</head>
+<body>
+    <div id="conteiner">
+        <p>Parágrafo</p>
+        <p id="remover">Removido</p>
+        <p id="removerChild">Removido</p>
+        <p id="substituir">Substituido</p>
+    </div>
+    
+    <script>
+        /* ADICIONANDO DEPOIS */
+        // Cria um <p> e seu texto
+        const elementNodeP = document.createElement('p');
+        const textNode = document.createTextNode('Novo parágrafo 1');
+        // Adiciona o textNode como filho de P
+        elementNodeP.appendChild(textNode);
+        const conteiner = document.getElementById('conteiner');
+        // Adiciona o P como lastChild de conteiner
+        conteiner.appendChild(elementNodeP);
+
+        /* ADICIONANDO ANTES */
+        // cria outro P
+        const elementNodeP2 = document.createElement('p');
+        const textNode2 = document.createTextNode('Novo parágrafo 2');
+        elementNodeP2.appendChild(textNode2);
+        // Adiciona o elementNodeP2 antes de elementNodeP
+        conteiner.insertBefore(elementNodeP2, elementNodeP);
+
+        /* REMOVENDO ELEMENTOS */
+        // element.remove
+        document.getElementById('remover').remove();
+        // parent.removeChild
+        const child = document.getElementById('removerChild')
+        conteiner.removeChild(child)
+
+        /* SUBSTITUINDO ELEMENTOS */
+        // Cria mais um P
+        const child2 = document.getElementById('substituir');
+        const elementNodeP3 = document.createElement('p');
+        const textNode3 = document.createTextNode('Novo parágrafo 3');
+        elementNodeP3.appendChild(textNode3);
+        // parent.replaceChild(novelemento, elementoantigo)
+        conteiner.replaceChild(elementNodeP3, child2)
+        
+    </script>
+</body>
+</html>

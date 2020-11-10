@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+
+    <style>
+        #rgb {
+            color: rgb(255, 255, 0)
+        }
+
+        #rgba {
+            color: rgba(255, 255, 0, 1.0);
+        }
+
+        #hex {
+            /* Ambos representam a mesma cor */
+            color: #ff0; 
+            color: #ffff00;
+        }
+
+        #hsl {
+            color: hsl(60, 100%, 50%);
+        }
+
+        body {
+            background-color: #000;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p id="rgb">RGB</p>
+    <p id="rgba">RGBA</p>
+    <p id="hex">Hexadecimal</p>
+    <p id="hsl">HSL</p>
+</body>
+</html>

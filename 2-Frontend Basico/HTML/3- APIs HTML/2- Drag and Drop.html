@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastar e Soltar</title>
+
+    <style>
+        #soltar{
+           width: 640px;
+           height: 425px;
+           padding: 5px;
+           border: 2px solid #000;
+        }
+        #arrastar {
+           width: 640px;
+           height: 425px;
+        }
+
+    </style>
+    <script>
+        // Todos métodos receberão o evento como parâmetro
+
+        // Define o que será arrastado
+        // Recebe o evento como param
+        function arrastarItem(evento) {
+            // Coloca o conteúdo do que está sendo arrastado dentro do evento
+            evento.dataTransfer.setData("text", evento.target.id);
+        }
+
+        function habilitarSoltarItem(evento){
+            // Define que o evento de soltar um item será aceito (padrão é não aceitar)
+            evento.preventDefault();
+        }
+
+        function soltarItem(evento) {
+            // Previne o comportamento padrão do navegador quando o item é solto (abrir como link)
+            evento.preventDefault();
+            // Obtem o item sendo arrastado
+            let dadoSendoArrastado = evento.dataTransfer.getData("text");
+            // Insere o item como child do div
+            evento.target.appendChild(document.getElementById(dadoSendoArrastado));
+        }
+    </script>
+</head>
+<body>
+<div id="soltar" ondrop="soltarItem(event)" ondragover="habilitarSoltarItem(event)"></div>
+
+<img id="arrastar" src="img/dragdrop.jpg" alt="Desenho de um olho azul" draggable="true" ondragstart ="arrastarItem(event)">
+
+    
+</body>
+</html>

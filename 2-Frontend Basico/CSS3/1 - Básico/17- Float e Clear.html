@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float e Clear</title>
+    <style>
+        body {
+            height: 100vh;
+
+        }
+        /* Float */
+        img {
+            max-width: 100px;
+            height: auto;
+            border: solid 1px #000;
+            margin: 5px;
+
+            /* Imagem vai flutuar a esquerda de seu contêiner  */
+            float: left;
+        }
+
+        p {
+            /* P vai flutuar a esquerda de um elemento, formando uma fila */
+            float: left;
+            max-width: 300px;
+            margin: 5px;
+            border: 0;
+        }
+        
+        /* Um conteiner vai ficar do lado do outro */
+        .conteiner {
+            border: solid 5px black;
+            max-width: 50%;
+            margin-left: 10px;
+            float: left;
+        }
+
+        /* Clear e Float */
+        #clearLeft {
+            background-color: red;
+            width: 100px;
+            /* clearLeft deveria ficar ao lado de float */
+            float: left;
+        }
+        #floatLeft {
+            background-color: green;
+            width: 100px;
+            float: left;
+            /* impede que clearLeft fique ao lado */
+            clear: left;
+        }
+
+        /* Clear causando overflow */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="conteiner clearfix">
+        <img src="img/img.jpg" alt="Olhos">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. </p>
+
+    </div>
+    <div class="conteiner">
+        <div id="clearLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vestibulum molestie pellentesque quam, quis convallis enim 
+            euismod non.</div>
+        <div id="floatLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vestibulum molestie pellentesque quam, quis convallis enim 
+            euismod non.</div>
+    </div>
+
+</body>
+</html>

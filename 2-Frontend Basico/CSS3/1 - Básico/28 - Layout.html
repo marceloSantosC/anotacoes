@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        /* Configurações iniciais */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        /* Define o header */
+        .header {
+            text-align: center;
+            padding: 15px;
+            background-color: #4682b4;
+            color: #fff;
+        }
+
+        /* Define um menu de navegação deitado */
+        .nav {
+            overflow: hidden;
+            display: block;
+            background-color: #3b79ac;
+        }
+        /* Estilo dos links de navegação */
+        .navlink {
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            padding: 12px 15px;
+            display: block;
+            float: left;
+
+
+        }
+        .navlink:hover {
+            color: #fff;
+            background-color: rgb(46, 109, 160);
+        }
+
+        /* Define o conteúdo de 3 colunas */
+        .coluna-principal {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            padding-bottom: 60vh;
+        }
+        .coluna-aside {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+        /* Limpa os floats depois das colunas, corrigindo o erro do section com 0 height */
+        .linha::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /* Define o footer */
+        .footer {
+            padding-top: 10px;
+            background-color: #3b79ac;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        @media screen and (max-width:600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    <nav class="nav">
+        <a href="" class="navlink">Link</a>
+        <a href="" class="navlink">Link</a>
+        <a href="" class="navlink">Link</a>
+        <a href="" class="navlink">Link</a>
+    </nav>
+
+    <section class="linha">
+        <aside class="coluna-aside">
+          <h2>Aside</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </aside>
+        
+        <section class="coluna-principal">
+          <h2>Principal</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </section>
+        
+        <aside class="coluna-aside">
+          <h2>Aside</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </aside>
+    </section>
+    <footer class="footer">Footer</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection</title>
+</head>
+<body>
+    <h1  class="x"></h1>
+    <p id="collection" class="x"></p>
+    <p  class="x"></p>
+
+    <script>
+        // HTML Collection 
+        // Retorna uma HTML Collection
+        let htmlCol = document.getElementsByName('p') 
+
+        // Acessar Collection
+        console.log(htmlCol[0])
+        console.log(htmlCol.item(0))
+
+        // Converter para array
+        // Método não compatível com IE8+
+        let array = Array.from(htmlCol)
+        console.log(array)
+        // Método para IE7 e antecessores
+        function toArray(x) {
+            for(var i = 0, a = []; i < x.length; i++) {
+                a.push(x[i])
+            }
+            return a
+        }
+
+        // NodeList
+        let nodeListEstatica = document.querySelectorAll('p')
+
+        // Acessar collection
+        nodeListEstatica[0]
+        nodeListEstatica.item(0)
+
+        // ForEach
+        nodeListEstatica.forEach(x => console.log(x.keys))
+
+        // Converter para array
+        Array.from(nodeListEstatica)
+    </script>
+    
+</body>
+</html>

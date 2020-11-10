@@ -1,0 +1,65 @@
+<form action="" method="get">
+    <!-- 
+        Select
+        Define uma lista drop-dowm
+        Size define o número de elemento visíveis 
+        Multiple habilita multi-seleção
+    -->
+    <label for="carros">Selecione um ou mais carros: </label>
+    <select name="carros" id="carros" size="3" multiple>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Gol">Gol</option>
+        <!-- Ford será o valor pré-selecionado (selected) -->
+        <option value="Ford" selected>Ford</option>
+    </select>
+
+    <!--
+        Textarea 
+        Define um input de texto com várias linhas
+        rows e cols definem o números de linhas e colunas
+        É possível alterar o tamanho através de css com width
+    -->
+    <label for="mensagem"></label>
+    <textarea name="mensagem" rows="10" cols="30">
+        Digite sua mensagem.
+    </textarea>
+
+    <!--
+        Button
+    -->
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <!--
+        Fieldset 
+        agrupa inputs relacionados
+    -->
+    <fieldset>
+        <!-- Legenda é o título que aparece no browser -->
+        <legend>Nome:</legend>
+        <label for="pnome">Primeiro Nome:</label><br>
+        <input type="text" id="pnome" name="pnome" value="John"><br>
+        <label for="unome">Último nome:</label><br>
+        <input type="text" id="unome" name="unome" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+
+    <!-- 
+        Datalist
+        Lista drop-down de elementos pré-definidos de um input 
+        O elemento list do input deve referenciar a datalist via id
+    -->
+    <input list="navegadores">
+    <datalist id="navegadores">
+        <option value="Opera">
+        <option value="Firefox">
+    </datalist>
+
+    <!-- 
+        Output
+        Representa uma saída de dados de um programa
+    -->
+    <output></output>
+
+
+    <input type="submit" value="Enviar">
+</form>

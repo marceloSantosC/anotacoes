@@ -1,0 +1,37 @@
+<h1>Links Absolutos</h1>
+<!-- É necessário colocar o http:// ou o navegador trata o link como url relativa -->
+<!-- target indica como a página do link será carregada, se em nova guia, mesma guia...-->
+<!-- Tittle mostra uma tooltip quando passar o mouse em cima do link-->
+<a href="https://google.com.br" title="Ir para pesquisa no google"> google </a> <br>
+<a href="https://google.com.br" target="_blank"> google com blank </a> <br> <br><br>
+
+
+<h1>Links relativos</h1>
+ <a href="index.html"> index.html </a> <br>
+ <!-- Acessa index.html a partir da pasta raiz da aplicação -->
+<a href="/index.html"> index.html </a> <br> 
+<!-- Tenta acessar index.html dentro a pasta superior a pasta atual-->
+<a href="../index.html"> index.html </a> <br> 
+
+
+<h1>Link como imagem</h1>
+<!-- Imagem como link -->
+<!-- Title dará informações sobre o link quando passar o mouse em cima-->
+<a href="index.html">
+    <img src="img/dragdrop.jpg" alt="?" title="?" style="width:42px;height:42px;">
+</a>
+
+<h1>Mail to</h1>
+<!-- Quando o link for aberto irá abrir um provedor de e-mail com o email passado no href -->
+<a href="mailto:marcelo17082000@gmail.com"> entre em contato </a> <br> <br>
+
+<div id="noticia" style="position:absolute;top:2000px;">
+    <h1>Notícia </h1>
+    <p>Não era verdade.</p>
+</div>
+
+<!-- Navegação dentro da página/ Ancora -->
+<a href="#noticia"> Notícia </a> <!-- Navega até o id noticia-->
+
+<!-- Jeito correto de se criar um link -->
+<a href="https://link" title="Ir para pesquisa no google"> google </a>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid View</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .colunas > * {
+            border: solid 2px red;
+        }
+
+        nav > a {
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            color: inherit;
+        }
+    
+        [class*=col-] {
+            /* Definir width para 100%, de modo a priorizar dispositivos menores 
+            e criar 1 coluna */
+            width: 100%;
+            float:left;
+            padding: 15px;
+        }
+
+        /* Breakpoint para tablets */
+        /* Utilizara 2 colunas quando for tablet */
+        @media only screen and (min-width: 600px) {
+            .col-1-tablet {width: 8.33%;}
+            .col-2-tablet {width: 16.66%;}
+            .col-3-tablet {width: 25%;}
+            .col-4-tablet {width: 33.33%;}
+            .col-5-tablet {width: 41.66%;}
+            .col-6-tablet {width: 50%;}
+            .col-7-tablet {width: 58.33%;}
+            .col-8-tablet {width: 66.66%;}
+            .col-9-tablet {width: 75%;}
+            .col-10-tablet {width: 83.33%;}
+            .col-11-tablet {width: 91.66%;}
+            .col-12-tablet {width: 100%;}
+        }
+
+
+        /* Breakpoint para desktops */
+        /* Usa 3 colunas quando o width for de um computador */
+        @media only screen and (min-width: 768px){
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        /* Tamanho de fonte */
+        /* Tamanho que será usado para dispositivos maiores que um celular */
+        @media only screen and (max-width: 600px) {
+            * {
+                font-size: 18px;
+            }
+            nav > a {
+                font-size: 25px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="colunas">
+    <header class="col-12 header">
+        <h1>Chania</h1>
+    </header>
+
+    <!-- Usa col 3 se existir (3 colunas), senão usa col-3-tablet (1/2 colunas) -->
+    <nav class="col-3 nav col-3-tablet">
+        <a href="">The Flight</a>
+        <a href="">The City</a>
+        <a href="">The Island</a>
+        <a href="">The Food</a>
+    </nav>
+
+    <!-- Usa col 6 (3 colunas) se existir, senão usa col-9-tablet (2/2 colunas) -->
+    <section class="col-6 nav col-9-tablet">
+        <h1>The City</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+    </section> 
+  
+    <!-- Usa col 3 (3 colunas) se existir, senão usa col-12-tablet (1 coluna) -->
+    <aside class="col-3 col-12-tablet">
+        <h2>What?</h2>
+        <p>Chania is a city on the island of Crete.</p>
+        <h2>Where?</h2>
+        <p>Crete is a Greek island in the Mediterranean Sea.</p>
+        <h2>How?</h2>
+        <p>You can reach Chania airport from all over Europe.</p>
+    </aside>
+</div>
+</body>
+</html>

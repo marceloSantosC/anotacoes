@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrando elementos</title>
+
+</head>
+<body>
+    <h1 id="id" class="classe"></h1>
+
+    <div id="pai">
+        <p class="filho"></p>
+        <p class="filho"></p>
+    </div>
+    <h2 class="classe"></h2>
+    <h3 class="classe"></h2>
+
+    <form action="">
+        <input type="email" name="email" id="email">
+        <input type="password" name="password" id="password">
+    </form>
+
+    <script>
+        // Buscando por ID
+        // Retorna o elemento como objeto ou null se não encontrar
+        document.getElementById("p")
+        
+        // Buscando pelo atributo name
+        // GetElementsByName
+        document.getElementsByName('pesquisa') // Retorna um node list
+
+        // Buscando pelo nome da tag
+        // GetElementsByTagName
+        document.getElementsByTagName('form') //  Retorna um html collection dos forms
+
+        // Buscando por classe
+        document.getElementsByClassName("classe")
+
+        // Buscando o que o usuário está selecionando
+        document.getSelection()
+
+        // Buscando um elemento e depois seus filhos 
+        let pai = document.getElementById("pai")
+        let filhos = pai.getElementsByClassName("filho")
+
+        // Buscando elementos por seletores CSS, funciona com qualquer seletor
+        // QuerySelectorAll retorna todos elementos correspondentes em um nodelist
+        let selectorAll = document.querySelectorAll("p.filho")
+        // QuerySelector retorna o primeiro correspondente encontrado
+        let selector = document.querySelector("p.filho")
+
+        // Buscando através de coleções de objetos
+        let inputs = document.anchors["form1"]
+        for(let i = 0; i < forms.lenght; i++) {
+            // algum código
+        }
+    </script>
+</body>
+</html>

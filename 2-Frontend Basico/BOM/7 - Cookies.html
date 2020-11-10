@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+
+<script>
+    // Criando um cookie
+    // "valor; validade, caminho"
+    document.cookie = "username=Jhon Doe; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+
+    // acessando cookies
+    let cookies = document.cookie;
+    console.log(cookies);
+
+    // modificando cookies
+    document.cookie = "username=Jhon; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+
+    // deletando cookies
+    // basta mudar expires para uma data passada
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+</script>
+</body>
+</html>

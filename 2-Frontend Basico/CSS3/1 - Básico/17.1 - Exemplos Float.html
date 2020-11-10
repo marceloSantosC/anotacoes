@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Float</title>
+    <style>
+        /* 3 Elementos ou mais um do lado do outro */
+        .elementoLadoLado {
+            width: 33.33%;
+            height: 45.5vh;
+            float: left;
+            padding: 0;
+            border: solid 1px black;
+            box-sizing: border-box;
+        }
+
+        /* 2 elementos um do lado do outro */
+        .doisElementosLadoLado {
+            margin-top: 10px;
+            float: left;
+            width: 50%;
+            height: 45.5vh;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        /* Clearfix para caso ocorra overflow */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+        /* Menu navegação */
+        nav {
+            background-color: red;
+            margin: 2px 0px 5px 0px;
+            height: 5vh;
+
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-size: 2vw;
+            padding: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 10px 15px;
+        }
+
+    </style>
+</head>
+<body class="clearfix">
+    <nav class="clearfix">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+    </nav>
+    <div class="elementoLadoLado" style="background-color: blue;">A</div>
+    <div class="elementoLadoLado" style="background-color: red;">B</div>
+    <div class="elementoLadoLado" style="background-color: greenyellow;">C</div>
+
+    <div class="clearfix">
+        <div class="doisElementosLadoLado" style="background-color: blue;">A</div>
+        <div class="doisElementosLadoLado" style="background-color: red;">B</div>
+    </div>
+
+    
+</body>
+</html>

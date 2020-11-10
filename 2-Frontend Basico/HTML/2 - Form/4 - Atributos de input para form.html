@@ -1,0 +1,41 @@
+<!-- 
+    Novalidate 
+    Desabilita toda validação do form 
+-->
+<form action="" id="form1" method="" novalidate >
+    <label for="email"></label>
+    <input type="email" name="email" id="email">
+
+    <!--
+        Formaction e Formethod
+        formaction: quando o botão é pressionado envia os dados para a url
+        formmethod: quando o botão é pressionado usa o método passado como parâmetro
+        ambos sobreescrevem action/method para o input
+    -->
+    <input type="submit" formaction="site.com" formmethod="POST">
+
+    <!--
+        Formenctype
+        Define como os dados serão codificados durante o envio com POST
+    -->
+    <input type="submit" formmethod="POST" formenctype="text/plain">
+
+    <!--
+        Formtarget
+        Faz a mesma coisa que target de form
+    -->
+    <input type="submit" formtarget="_blank">
+
+    <!--
+        Formnovalidate 
+        Desabilita a validação do input antes do envio, mas só funciona com submit
+    -->
+    <input type="submit" formnovalidate="formnovalidate">
+
+
+</form>
+<!-- 
+    atributo form de input
+    Associa o input ao form mesmo que fora da tag
+-->
+<input type="password" name="pw" id="pw" form="form1">

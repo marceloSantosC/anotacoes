@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando CSS</title>
+    <style>
+        .estiloPadrao {
+            background-color: red;
+            width: 200px; 
+            height: 200px;
+        }
+
+        .novoEstilo {
+            background-color:royalblue;
+            width: 250px; 
+            height: 250px;   
+        }
+    </style>
+</head>
+<body>
+    <h1 id="texto">Texto</h1>
+
+    <div id="macaco" class="estiloPadrao"> </div>
+    <button type="button" onclick="mudarEstiloComAtributo"></button>
+    <script>
+        // Modificando o estilo passando propriedades como strings
+        document.body.style = "background-color: #000";
+        document.getElementById("texto").style = "color: #fff";
+
+        // Modificando estilo usando as propriedades como atributos de obj (os valores ainda são strings)
+        document.body.style.backgroundColor = '#000';
+
+        // Criando animações
+        function mudarCor() {
+            let mudar = false;   
+            if(mudar) {
+                document.body.style = "background-color: #000";
+                document.getElementById("texto").style = "color: #fff";
+                mudar = true;
+            } else {
+                document.body.style = "background-color: #fff";
+                document.getElementById("texto").style = "color: #000";
+                clearInterval();
+            }
+        }
+
+        setInterval(mudarCor, 1000)
+
+    </script>
+</body>
+</html>

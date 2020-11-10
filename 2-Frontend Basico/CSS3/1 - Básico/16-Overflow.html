@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        div{
+            max-width: 200px;
+            height: 100px;
+            border: solid 5px red;
+        }
+        
+        #visible {
+            overflow: visible; /* é padrão */
+        }
+
+        #hidden {
+            position: relative;
+            left: 210px;
+            overflow: hidden;
+        }
+
+        #scroll {
+            overflow: scroll;
+            position: relative;
+            left: 420px;
+        }
+
+        #auto {
+            overflow: auto;
+            position: relative;
+            left: 630px;
+        }
+
+        /* Overflow x e y 
+           Mudam o overflow vertical e horizontal */
+        #xy {
+            overflow-y: hidden;
+            overflow-x: scroll;
+            position: relative;
+            left: 840px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="visible">
+        <h1>visible</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. Donec accumsan venenatis auctor. Mauris mattis
+        velit ac imperdiet pulvinar. Nunc id nibh non est malesuada
+        efficitur ac ac urna. Vestibulum euismod ex ac turpis fermentum,
+        vitae dignissim magna vulputate. Cras nisi velit, venenatis in
+        nisi sed, sodales imperdiet dui. Etiam a libero pharetra, 
+        ullamcorper augue eget, ullamcorper tellus. Integer at 
+        lobortis leo. Pellentesque eget enim orci. Ut ultrices malesuada
+        pulvinar. Ut dapibus sollicitudin enim, sed commodo ipsum interdum
+        quis. Curabitur maximus ipsum ut ornare vulputate. Donec 
+        enim mauris, elementum non purus at, eleifend interdum turpis.
+         Aenean vel augue leo.
+    </div>
+    
+
+    <div id="hidden"> 
+        <h1>hidden</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. Donec accumsan venenatis auctor. Mauris mattis
+        velit ac imperdiet pulvinar. Nunc id nibh non est malesuada
+        efficitur ac ac urna. Vestibulum euismod ex ac turpis fermentum,
+        vitae dignissim magna vulputate. Cras nisi velit, venenatis in
+        nisi sed, sodales imperdiet dui. Etiam a libero pharetra, 
+        ullamcorper augue eget, ullamcorper tellus. Integer at 
+        lobortis leo. Pellentesque eget enim orci. Ut ultrices malesuada
+        pulvinar. Ut dapibus sollicitudin enim, sed commodo ipsum interdum
+        quis. Curabitur maximus ipsum ut ornare vulputate. Donec 
+        enim mauris, elementum non purus at, eleifend interdum turpis.
+         Aenean vel augue leo.
+    </div>
+
+    <div id="scroll">
+        <h1>scroll</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. Donec accumsan venenatis auctor. Mauris mattis
+        velit ac imperdiet pulvinar. Nunc id nibh non est malesuada
+        efficitur ac ac urna. Vestibulum euismod ex ac turpis fermentum,
+        vitae dignissim magna vulputate. Cras nisi velit, venenatis in
+        nisi sed, sodales imperdiet dui. Etiam a libero pharetra, 
+        ullamcorper augue eget, ullamcorper tellus. Integer at 
+        lobortis leo. Pellentesque eget enim orci. Ut ultrices malesuada
+        pulvinar. Ut dapibus sollicitudin enim, sed commodo ipsum interdum
+        quis. Curabitur maximus ipsum ut ornare vulputate. Donec 
+        enim mauris, elementum non purus at, eleifend interdum turpis.
+         Aenean vel augue leo.
+    </div>
+
+    <div id="auto">
+        <h1>auto</h1>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. Donec accumsan venenatis auctor. Mauris mattis
+        velit ac imperdiet pulvinar. Nunc id nibh non est malesuada
+        efficitur ac ac urna. Vestibulum euismod ex ac turpis fermentum,
+        vitae dignissim magna vulputate. Cras nisi velit, venenatis in
+        nisi sed, sodales imperdiet dui. Etiam a libero pharetra, 
+        ullamcorper augue eget, ullamcorper tellus. Integer at 
+        lobortis leo. Pellentesque eget enim orci. Ut ultrices malesuada
+        pulvinar. Ut dapibus sollicitudin enim, sed commodo ipsum interdum
+        quis. Curabitur maximus ipsum ut ornare vulputate. Donec 
+        enim mauris, elementum non purus at, eleifend interdum turpis.
+         Aenean vel augue leo.
+    </div>
+
+    <div id="xy">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie pellentesque quam, quis convallis enim 
+        euismod non. Donec accumsan venenatis auctor. Mauris mattis
+        velit ac imperdiet pulvinar. Nunc id nibh non est malesuada
+        efficitur ac ac urna. Vestibulum euismod ex ac turpis fermentum,
+        vitae dignissim magna vulputate. Cras nisi velit, venenatis in
+        nisi sed, sodales imperdiet dui. Etiam a libero pharetra, 
+        ullamcorper augue eget, ullamcorper tellus. Integer at 
+        lobortis leo. Pellentesque eget enim orci. Ut ultrices malesuada
+        pulvinar. Ut dapibus sollicitudin enim, sed commodo ipsum interdum
+        quis. Curabitur maximus ipsum ut ornare vulputate. Donec 
+        enim mauris, elementum non purus at, eleifend interdum turpis.
+         Aenean vel augue leo.
+    </div>
+
+         
+    
+</body>
+</html>

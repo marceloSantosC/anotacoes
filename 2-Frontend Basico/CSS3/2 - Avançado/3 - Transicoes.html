@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 20px;
+            color: white;
+
+            /* Define o efeito de transição e sua duração quando width ou height for alterado */
+            transition: width 2s, height 4s;
+
+            /* Delay antes da transition começar */
+            transition-delay: 1s;
+
+            /* Todas propriedades */
+            transition-property: width;
+            transition-duration: 2s;
+            /* Define como a transição corre*/
+            transition-timing-function: linear;
+            transition-delay: 1s;
+
+            /* Shorhand */
+            transition: width 2s linear 1s;
+        }
+
+        /* Altera o width e height com hover, iniciando o efeito de transição*/
+        div:hover{
+            width: 50px;
+            height: 50px;
+            background-color: royalblue;
+        }
+
+
+        /* transition-timing-function */
+        #ease {
+            transition-timing-function: ease;
+        }
+
+        #linear {
+            transition-timing-function: linear;
+        }
+
+        #ease-in {
+            transition-timing-function: ease-in;
+        }
+
+        #ease-out {
+            transition-timing-function: ease-out;
+        }
+
+        #ease-in-out{
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="ease">ease</div>
+    <div id="linear">linear</div>
+    <div id="ease-in">ease-in</div>
+    <div id="ease-out">ease-out</div>
+    <div id="ease-in-out">ease-in-out</div>
+</body>
+</html>

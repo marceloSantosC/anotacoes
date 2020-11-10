@@ -1,0 +1,27 @@
+<!-- Doctype de XHTML-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- Atributo xmlns -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Título obrigatório -->
+    <title>Title</title>
+</head>
+<body>
+<!-- Elementos devem ser fechados na ordem correta -->
+<b><i>Some text</b></i> <!-- Errado -->
+<b><i>Some text</i></b> <!-- Certo -->
+
+<!-- Elementos devem ser fechados, incluindo elementos vazios -->
+<p>This is a paragraph</p>
+<hr/>
+
+<!-- valores de atributos e atributos em minúsculas e com aspas -->
+<p atributo="valor"> text </p>
+
+<!-- Não é possível minimizar atributos -->
+<input disabled /> <!-- Errado -->
+<input disabled="disabled" /><!-- Certo -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline</title>
+
+    <style>
+        #outline{
+            max-width: 300px;
+            height: 300px;
+            border: solid 20px blue;
+
+            /* Width */
+            outline-width: thin; /* 1px */
+            outline-width: medium; /* 3px */
+            outline-width: thick; /* 5px */
+            outline-width: 20px;
+
+            /*  Style
+                Deve ser definido */
+            outline-style: solid;
+
+            /* Color */
+            /* Inverte a cor com border */
+            outline-color: invert; 
+            outline-color: red;
+
+            /* Shorthand */
+            outline: thick solid red; /*width, style, color  */
+
+            /* Offset 
+               Espaço entre o outline e a borda */
+            outline-offset: 20px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="outline"></div>
+</body>
+</html>

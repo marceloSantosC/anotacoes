@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Sprite</title>
+    <style>
+        #home {
+            /* Define a porção de imagem a ser usada */
+            width: 46px;
+            height: 44px;
+
+            /* Define a posição da imagem de background (0 left e 0 top),
+               Isso quer dizer que a imagem será cortada 46px de largura da esquerda para direita
+            e 44px de altura do top ao fim. */
+            background: url("img/img_navsprites.gif") 0 0;
+        }
+
+        #next {
+            width: 44px;
+            height: 44px;
+            background: url("img/img_navsprites.gif") 100% 0; 
+        }
+    </style>
+</head>
+<body>
+<!-- Img transparente, o atributo src não pode ser vazio -->
+<img id="home" src="img/tsp.png" width="1" height="1">
+<img id="next" src="img/tsp.png" width="1" height="1">
+</body>
+</html>
